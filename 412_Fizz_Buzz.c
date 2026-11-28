@@ -7,15 +7,12 @@ char** fizzBuzz(int n, int* returnSize)
     {
         answer[i] = malloc(20);
 
-        if ((i+1) % 15 == 0)
+        if ((i+1)%3 == 0 && (i+1)%5 == 0)
             strcpy(answer[i], "FizzBuzz");
-
-        else if ((i+1) % 3 == 0)
+        else if ((i+1)%3 == 0)
             strcpy(answer[i], "Fizz");
-
-        else if ((i+1) % 5 == 0)
+        else if ((i+1)%5 == 0)
             strcpy(answer[i], "Buzz");
-
         else
             sprintf(answer[i], "%d", i+1);
     }
